@@ -28,7 +28,12 @@
                         <td>@item.Nit</td>
                         <td>@item.Age</td>
                         <td>
-                            <button type="submit" asp-page-handler="delete" asp-route-id="@item.Id">
+                            <a class="waves-effect waves-light btn-small" asp-page="Edit" asp-route-id="@item.Id">
+                                Edit
+                            </a>
+                        </td>
+                        <td>
+                            <button class="waves-effect waves-light btn-small" type="submit" asp-page-handler="delete" asp-route-id="@item.Id">
                                 delete
                             </button>
                         </td>

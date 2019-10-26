@@ -35,6 +35,22 @@ namespace TGL.WebApp.Data
             });
         }
 
+        internal void EditStudent(Student student)
+        {
+            //var currentStudent = GetStudentById(student.Id);
+            Student currentStudent = GetStudentById(student.Id);
+            currentStudent.Name = student.Name;
+            currentStudent.LastName = student.LastName;
+            currentStudent.Nit = student.Nit;
+            currentStudent.Age = student.Age;
+
+        }
+
+        internal Student GetStudentById(Guid id)
+        {
+            return Students.FirstOrDefault(x => x.Id == id);
+        }
+
         internal void AddStudent(Student student)
         {
             Students.Add(student);
