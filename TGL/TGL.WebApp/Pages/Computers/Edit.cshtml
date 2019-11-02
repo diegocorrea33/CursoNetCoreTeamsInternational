@@ -1,0 +1,29 @@
+﻿@page
+@model TGL.WebApp.Pages.Computers.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<form method="post">
+    <input hidden asp-for="Computer.Id" />
+    <input hidden asp-for="Computer.StudentId" />
+
+    Brand
+    <input asp-for="Computer.Brand" />
+    Model
+    <input asp-for="Computer.Model" />
+    Cpu
+    <input asp-for="Computer.Cpu" />
+    Ram
+    <input asp-for="Computer.Ram" />
+
+    <button class="waves-effect waves-light btn-small" type="submit">
+        Edit
+    </button>
+</form>
+
+
+
+<a asp-page="./Index">Return</a>

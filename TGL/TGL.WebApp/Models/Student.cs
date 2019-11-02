@@ -23,6 +23,7 @@ namespace TGL.WebApp.Models
         
         public Guid Id { get; set; } 
         
+        public List<Computer> Computers { get; set; }
 
         //public Guid Id { get; set; } = Guid.NewGuid();
 
